@@ -25,6 +25,7 @@ namespace MembershipApplication.Views
         public MainPage()
         {
             this.InitializeComponent();
+            DataContext = new MainViewModel();
         }
     }
 }
