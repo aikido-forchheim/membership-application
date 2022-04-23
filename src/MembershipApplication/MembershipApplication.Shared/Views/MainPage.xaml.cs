@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Microsoft.Extensions.DependencyInjection;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,7 +26,8 @@ namespace MembershipApplication.Views
         public MainPage()
         {
             this.InitializeComponent();
-            DataContext = new MainViewModel();
+            var container = ((App)App.Current).Container;
+            DataContext = ActivatorUtilities.GetServiceOrCreateInstance(container, typeof(MainViewModel));
         }
     }
 }

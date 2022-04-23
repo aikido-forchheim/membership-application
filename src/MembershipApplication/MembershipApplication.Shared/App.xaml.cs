@@ -1,3 +1,5 @@
+using MembershipApplication.Interfaces;
+using MembershipApplication.Services;
 using MembershipApplication.Views;
 using Microsoft.Extensions.Logging;
 using System;
@@ -16,6 +18,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Microsoft.Extensions.DependencyInjection;
+
 
 namespace MembershipApplication
 {
@@ -39,6 +43,21 @@ namespace MembershipApplication
 #if HAS_UNO || NETFX_CORE
             this.Suspending += OnSuspending;
 #endif
+            Container = ConfigureDependencyInjection();
+        }
+    
+        public IServiceProvider Container { get; }
+    
+        IServiceProvider ConfigureDependencyInjection()
+        {
+            // Create new service collection which generates the IServiceProvider
+            var serviceCollection = new ServiceCollection();
+        
+            // TODO - Register dependencies
+            serviceCollection.AddTransient<IMessageService, MessageService>();
+        
+            // Build the IServiceProvider and return it
+            return serviceCollection.BuildServiceProvider();
         }
 
         /// <summary>
