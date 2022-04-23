@@ -1,0 +1,17 @@
+{
+  "solution": {
+    "path": "MembershipApplication.sln",
+    "projects": [
+		"MembershipApplication.Shared\\MembershipApplication.Shared.shproj",
+
+
+
+
+		"MembershipApplication.Wasm\\MembershipApplication.Wasm.csproj",
+
+
+		"MembershipApplication.Skia.Gtk\\MembershipApplication.Skia.Gtk.csproj",
+
+    ]
+  }
+}
