@@ -6,12 +6,45 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Margin="32"
+    >
 
-    <StackPanel>
+    <StackPanel 
+    Spacing="16">
+
         <StackPanel Orientation="Horizontal">
-            <TextBlock Text="Mitglieds-Nr.:" />
-            <TextBox Text="{Binding Id}" />
+            
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Aufnahmeantrag" VerticalAlignment="Center" Margin="8" />
+            
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Kinderanmeldung" VerticalAlignment="Center" Margin="8" />
+            <ToggleSwitch IsOn="{Binding IsChildApplication, Mode=TwoWay}"></ToggleSwitch>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Mitglieds-Nr.:" VerticalAlignment="Center" Margin="8" />
+            <TextBox Text="{Binding Id, Mode=TwoWay}" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Familienname" VerticalAlignment="Center" Margin="8" />
+            <TextBox Text="{Binding LastName, Mode=TwoWay}" Width="256" />
+            <TextBlock Text="Vorname" VerticalAlignment="Center" Margin="8" />
+            <TextBox Text="{Binding FirstName, Mode=TwoWay}" Width="256" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Geburtsdatum" VerticalAlignment="Center" Margin="8" />
+            <TextBox Text="{Binding Birthday, Mode=TwoWay}" Width="256" IsEnabled="{Binding IsAdultApplication}" />
+            <TextBlock Text="Geburtsort" VerticalAlignment="Center" Margin="8" />
+            <TextBox Text="{Binding Birthplace, Mode=TwoWay}" Width="256" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Geburtsdatum" VerticalAlignment="Center" Margin="8" />
+            <TextBox Text="{Binding Birthday, Mode=TwoWay}" Width="256" IsEnabled="{Binding IsAdultApplication}" />
+            <TextBlock Text="Geburtsort" VerticalAlignment="Center" Margin="8" />
+            <TextBox Text="{Binding Birthplace, Mode=TwoWay}" Width="256" />
         </StackPanel>
     </StackPanel>
 </Page>
