@@ -12,5 +12,6 @@
       <TextBlock Text="{Binding Message}" Margin="20" FontSize="30" />
       <CheckBox IsChecked="{Binding RememberMe2, Mode=TwoWay}" />
       <CheckBox IsChecked="{Binding RememberMe, Mode=TwoWay}" />
+      <Button Command="{Binding FirstCommand}" Content="Test" />
     </StackPanel>
 </Page>

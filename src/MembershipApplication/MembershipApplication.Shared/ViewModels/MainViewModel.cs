@@ -1,5 +1,8 @@
+using System;
+using System.Threading.Tasks;
 using MembershipApplication.Interfaces;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Microsoft.Toolkit.Mvvm.Input;
 
 public class MainViewModel : ObservableRecipient
 {
@@ -23,9 +26,21 @@ public class MainViewModel : ObservableRecipient
     }
 
     protected IMessageService MessageService { get; }
-     
+
+    // Toolkit.Mvvm
+    public IAsyncRelayCommand FirstCommand { get; }
+    
+
+    private Task OnCommandAsync(string arg)
+    {
+        RememberMe = true;
+        return Task.FromResult(RememberMe);
+    }
+
     public MainViewModel(IMessageService messageService)
     {
         MessageService = messageService;
+
+        FirstCommand = new AsyncRelayCommand<string>(OnCommandAsync);
     }
 }
