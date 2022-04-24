@@ -11,6 +11,7 @@ namespace MembershipApplication.ViewModels
             set
             {
                 SetProperty(ref _isChildApplication, value);
+                if (value || IsAdultApplication == IsChildApplication)
                 IsAdultApplication = !value;
             }
         }
@@ -22,7 +23,8 @@ namespace MembershipApplication.ViewModels
             set
             {
                 SetProperty(ref _isAdultApplication, value);
-                //IsChildApplication = !value;
+                if (value || IsAdultApplication == IsChildApplication)
+                IsChildApplication = !value;
             }
         }
 
