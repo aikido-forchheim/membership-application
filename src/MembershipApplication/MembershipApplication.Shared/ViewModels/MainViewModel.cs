@@ -1,6 +1,6 @@
 using MembershipApplication.Interfaces;
-
-public class MainViewModel
+using MvvmCross.ViewModels;
+public class MainViewModel : MvxViewModel
 {
     public string Message { get => MessageService.GetMessage(); }
 
