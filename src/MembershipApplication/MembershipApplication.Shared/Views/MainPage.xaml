@@ -9,5 +9,9 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Mitglieds-Nr.:" />
+            <TextBox Text="{Binding Id}" />
+        </StackPanel>
     </StackPanel>
 </Page>
