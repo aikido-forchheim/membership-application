@@ -40,5 +40,36 @@ namespace MembershipApplication.ViewModels
             get => _birthday;
             set => SetProperty(ref _birthday, value);
         }
+
+        private bool _isBk1Checked;
+        public bool IsBk1Checked
+        {
+            get => _isBk1Checked;
+            set => SetProperty(ref _isBk1Checked, value);
+        }
+
+        private bool _isBk2Checked;
+        public bool IsBk2Checked
+        {
+            get => _isBk2Checked;
+            set => SetProperty(ref _isBk2Checked, value);
+        }
+
+
+        private bool _isBk3Checked;
+        public bool IsBk3Checked
+        {
+            get => _isBk3Checked;
+            set => SetProperty(ref _isBk3Checked, value);
+        }
+
+
+
+        private bool _isBk4Checked;
+        public bool IsBk4Checked
+        {
+            get => _isBk4Checked;
+            set => SetProperty(ref _isBk4Checked, value);
+        }
     }
 }
