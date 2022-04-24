@@ -73,5 +73,29 @@ namespace MembershipApplication.ViewModels
             get => _isBk4Checked;
             set => SetProperty(ref _isBk4Checked, value);
         }
+
+        private bool _secondFamilyMembership;
+        public bool SecondFamilyMembership
+        {
+            get => _secondFamilyMembership;
+            set
+            {
+                SetProperty(ref _secondFamilyMembership, value);
+                if (value)
+                ThirdFamilyMembership = !value;
+            }
+        }
+
+        private bool _thirdFamilyMembership;
+        public bool ThirdFamilyMembership
+        {
+            get => _thirdFamilyMembership;
+            set
+            {
+                SetProperty(ref _thirdFamilyMembership, value);
+                if (value)
+                SecondFamilyMembership = !value;
+            }
+        }
     }
 }

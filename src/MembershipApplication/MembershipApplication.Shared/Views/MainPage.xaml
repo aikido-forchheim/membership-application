@@ -116,5 +116,10 @@
         <RadioButton Grid.Row="22" x:Name="BK3" IsChecked="{Binding IsBk3Checked, Mode=TwoWay}" GroupName="Beitragsklasse" Content="Beitragsklasse III" FontWeight="Bold" />
         <RadioButton Grid.Row="23" x:Name="BK4" IsChecked="{Binding IsBk4Checked, Mode=TwoWay}" GroupName="Beitragsklasse" Content="Beitragsklasse IV" FontWeight="Bold" />
         
+        <CheckBox Grid.Row="24" Grid.Column="0" IsChecked="{Binding SecondFamilyMembership, Mode=TwoWay}" ></CheckBox>
+        <TextBlock Grid.Row="24" Grid.Column="1" Text="2. Familienmitglied" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="24" Grid.Column="2" IsChecked="{Binding ThirdFamilyMembership, Mode=TwoWay}" ></CheckBox>
+        <TextBlock Grid.Row="24" Grid.Column="3" Text="3. oder weiteres Familienmitglied" VerticalAlignment="Center" />
+
     </Grid>
 </Page>
