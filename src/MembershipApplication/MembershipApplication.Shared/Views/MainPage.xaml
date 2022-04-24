@@ -30,6 +30,9 @@
             <!--14--><RowDefinition Height="32"></RowDefinition>
             <!--15--><RowDefinition Height="32"></RowDefinition>
             <!--16--><RowDefinition Height="32"></RowDefinition>
+            <!--17--><RowDefinition Height="32"></RowDefinition>
+            <!--18--><RowDefinition Height="32"></RowDefinition>
+            <!--19--><RowDefinition Height="32"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="210"></ColumnDefinition>
@@ -38,42 +41,71 @@
             <ColumnDefinition Width="210"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
-        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="AIKIDO-VEREIN FORCHHEIM E.V." FontSize="16" VerticalAlignment="Center" />
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontWeight="Bold" Text="AIKIDO-VEREIN FORCHHEIM E.V." FontSize="18" VerticalAlignment="Center" />
+        
         <TextBlock Grid.Row="0" Grid.Column="2" Text="Mitglieds-Nr.:" VerticalAlignment="Center" />
         <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding Id, Mode=TwoWay}" />
+        
+        <TextBlock Grid.Row="1" Grid.Column="3" Text="(wird vom Verein zugeordnet)" FontSize="10" VerticalAlignment="Center" />
+        
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Kind" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="2" Grid.Column="1" IsChecked="{Binding IsChildApplication, Mode=TwoWay}"></CheckBox>
+        <TextBlock Grid.Row="2" Grid.Column="2" Text="Erwachsener" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" />
+        <CheckBox Grid.Row="2" Grid.Column="3" IsChecked="{Binding IsAdultApplication, Mode=TwoWay}"></CheckBox>
+        
+        <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" FontWeight="Bold" Text="Hiermit beantrage ich (als geetzlicher Vertreter)," VerticalAlignment="Center" />
+        <TextBlock Grid.Row="3" Grid.Column="3" Text="(Nichtzutreffendes bitte streichen)" FontSize="10" VerticalAlignment="Center" />
+ 
+        
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Familienname:" VerticalAlignment="Center" />
+        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding LastName, Mode=TwoWay}" />
+        <TextBlock Grid.Row="4" Grid.Column="2" Text="Vorname:" VerticalAlignment="Center" />
+        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding FirstName, Mode=TwoWay}" />
     
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Kinderanmeldung" VerticalAlignment="Center" />
-        <CheckBox Grid.Row="1" Grid.Column="1" IsChecked="{Binding IsChildApplication, Mode=TwoWay}"></CheckBox>
-        <TextBlock Grid.Row="1" Grid.Column="2" Text="Erwachsenenanmeldung" VerticalAlignment="Center" />
-        <CheckBox Grid.Row="1" Grid.Column="3" IsChecked="{Binding IsAdultApplication, Mode=TwoWay}"></CheckBox>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Geburtsdatum:" VerticalAlignment="Center" />
+        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Birthday, Mode=TwoWay}" IsEnabled="{Binding IsAdultApplication}" />
+        <TextBlock Grid.Row="5" Grid.Column="2" Text="Geburtsort" VerticalAlignment="Center" />
+        <TextBox Grid.Row="5" Grid.Column="3" Text="{Binding Birthplace, Mode=TwoWay}" IsEnabled="false" />
 
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Beruf:" VerticalAlignment="Center" />
+        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding Profession, Mode=TwoWay}" IsEnabled="false" />
+        <TextBlock Grid.Row="6" Grid.Column="2" Text="Wohnadresse:" VerticalAlignment="Center" />
         
-        <TextBlock Grid.Row="3" Grid.Column="0" Text="Familienname:" VerticalAlignment="Center" />
-        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding LastName, Mode=TwoWay}" />
-        <TextBlock Grid.Row="3" Grid.Column="2" Text="Vorname:" VerticalAlignment="Center" />
-        <TextBox Grid.Row="3" Grid.Column="3" Text="{Binding FirstName, Mode=TwoWay}" />
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="Straße:" VerticalAlignment="Center" />
+        <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding FullStreet, Mode=TwoWay}" IsEnabled="false" />
+        
+        <TextBlock Grid.Row="8" Grid.Column="0" Text="PLZ, Wohnort:" VerticalAlignment="Center" />
+        <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding FullPlace, Mode=TwoWay}" IsEnabled="false" />
+        
+        <TextBlock Grid.Row="9" Grid.Column="0" Text="Telefon (Festnetz, Mobilnetz):" VerticalAlignment="Center" />
+        <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding Phone, Mode=TwoWay}" IsEnabled="true" />
+        
+        <TextBlock Grid.Row="10" Grid.Column="0" Text="E-Mail-Adresse:" VerticalAlignment="Center" />
+        <TextBox Grid.Row="10" Grid.Column="1" Text="{Binding Mail, Mode=TwoWay}" IsEnabled="true" />
+        
+        <TextBlock Grid.Row="11" Grid.Column="0" Text="(Zur Vermeidung von Lesefehlem bitte eine E-Mail an vorstand@aikido-forchheim.de senden!)" Grid.ColumnSpan="4" VerticalAlignment="Center" />
+        <TextBlock Grid.Row="12" Grid.Column="0" FontWeight="Bold" Text="für meinen minderjährigen Sohn/meine minderjährige Tochter:" Grid.ColumnSpan="4" VerticalAlignment="Center" />
+
+        <TextBlock Grid.Row="13" Grid.Column="0" Text="Familienname:" VerticalAlignment="Center" />
+        <TextBox Grid.Row="13" Grid.Column="1" Text="{Binding LastNameChild, Mode=TwoWay}" />
+        <TextBlock Grid.Row="13" Grid.Column="2" Text="Vorname:" VerticalAlignment="Center" />
+        <TextBox Grid.Row="13" Grid.Column="3" Text="{Binding FirstNameChild, Mode=TwoWay}" />
     
-        <TextBlock Grid.Row="4" Grid.Column="0" Text="Geburtsdatum:" VerticalAlignment="Center" />
-        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Birthday, Mode=TwoWay}" IsEnabled="{Binding IsAdultApplication}" />
-        <TextBlock Grid.Row="4" Grid.Column="2" Text="Geburtsort" VerticalAlignment="Center" />
-        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding Birthplace, Mode=TwoWay}" IsEnabled="false" />
+        <TextBlock Grid.Row="14" Grid.Column="0" Text="Geburtsdatum:" VerticalAlignment="Center" />
+        <TextBox Grid.Row="14" Grid.Column="1" Text="{Binding BirthdayChild, Mode=TwoWay}" IsEnabled="{Binding IsChildApplication}" />
+        <TextBlock Grid.Row="14" Grid.Column="2" Text="Geburtsort" VerticalAlignment="Center" />
+        <TextBox Grid.Row="14" Grid.Column="3" Text="{Binding BirthplaceChild, Mode=TwoWay}" IsEnabled="false" />
 
-        <TextBlock Grid.Row="5" Grid.Column="0" Text="Beruf:" VerticalAlignment="Center" />
-        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Profession, Mode=TwoWay}" IsEnabled="false" />
-        <TextBlock Grid.Row="5" Grid.Column="2" Text="Wohnadresse:" VerticalAlignment="Center" />
-        
-        <TextBlock Grid.Row="6" Grid.Column="0" Text="Straße:" VerticalAlignment="Center" />
-        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding FullStreet, Mode=TwoWay}" IsEnabled="false" />
-        
-        <TextBlock Grid.Row="7" Grid.Column="0" Text="PLZ, Wohnort:" VerticalAlignment="Center" />
-        <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding FullPlace, Mode=TwoWay}" IsEnabled="false" />
-        
-        <TextBlock Grid.Row="8" Grid.Column="0" Text="Telefon (Festnetz, Mobilnetz):" VerticalAlignment="Center" />
-        <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding Phone, Mode=TwoWay}" IsEnabled="true" />
-        
-        <TextBlock Grid.Row="9" Grid.Column="0" Text="E-Mail-Adresse:" VerticalAlignment="Center" />
-        <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding Mail, Mode=TwoWay}" IsEnabled="true" />
-        
+        <TextBlock Grid.Row="15" Grid.Column="0" Text="Beruf:" VerticalAlignment="Center" />
+        <TextBox Grid.Row="15" Grid.Column="1" Text="{Binding ProfessionChild, Mode=TwoWay}" IsEnabled="false" />
+        <TextBlock Grid.Row="15" Grid.Column="2" Text="Wohnadresse (falls abweichend):" Grid.ColumnSpan="2" VerticalAlignment="Center" />
 
+        <TextBlock Grid.Row="16" Grid.Column="0" Text="........................." VerticalAlignment="Center" />
+
+        <TextBlock Grid.Row="17" Grid.Column="0" Text="die Aufnahme in den Aikido-Verein Forchheim e.V." FontWeight="Bold" Grid.ColumnSpan="4" VerticalAlignment="Center" />
+        <TextBlock Grid.Row="18" Grid.Column="0" Text="Hinsichtlich des Mitgliedsbeitrags (Jahresbeitrag) bitte ich um Zuordnung in der nachfolgend" Grid.ColumnSpan="4" VerticalAlignment="Center" />
+        <TextBlock Grid.Row="19" Grid.Column="0" Text="angekreuzten Beitragsklasse." Grid.ColumnSpan="4" VerticalAlignment="Center" />
+
+        <!-- Beitragsklassen -->
     </Grid>
 </Page>
