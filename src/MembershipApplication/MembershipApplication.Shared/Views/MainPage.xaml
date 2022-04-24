@@ -33,6 +33,11 @@
             <!--17--><RowDefinition Height="32"></RowDefinition>
             <!--18--><RowDefinition Height="32"></RowDefinition>
             <!--19--><RowDefinition Height="32"></RowDefinition>
+            <!--20--><RowDefinition Height="32"></RowDefinition>
+            <!--21--><RowDefinition Height="32"></RowDefinition>
+            <!--22--><RowDefinition Height="32"></RowDefinition>
+            <!--23--><RowDefinition Height="32"></RowDefinition>
+            <!--24--><RowDefinition Height="32"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="210"></ColumnDefinition>
@@ -106,6 +111,10 @@
         <TextBlock Grid.Row="18" Grid.Column="0" Text="Hinsichtlich des Mitgliedsbeitrags (Jahresbeitrag) bitte ich um Zuordnung in der nachfolgend" Grid.ColumnSpan="4" VerticalAlignment="Center" />
         <TextBlock Grid.Row="19" Grid.Column="0" Text="angekreuzten Beitragsklasse." Grid.ColumnSpan="4" VerticalAlignment="Center" />
 
-        <!-- Beitragsklassen -->
+        <RadioButton Grid.Row="20" x:Name="BK1" GroupName="Beitragsklasse" Content="Beitragsklasse I" FontWeight="Bold" />
+        <RadioButton Grid.Row="21" x:Name="BK2" GroupName="Beitragsklasse" Content="Beitragsklasse II" FontWeight="Bold" />
+        <RadioButton Grid.Row="22" x:Name="BK3" GroupName="Beitragsklasse" Content="Beitragsklasse III" FontWeight="Bold" />
+        <RadioButton Grid.Row="23" x:Name="BK4" GroupName="Beitragsklasse" Content="Beitragsklasse IV" FontWeight="Bold" />
+        
     </Grid>
 </Page>
