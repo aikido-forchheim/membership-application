@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     Margin="32"
     >
-
+    <ScrollViewer>
     <Grid>
 
         <Grid.RowDefinitions>
@@ -38,6 +38,15 @@
             <!--22--><RowDefinition Height="32"></RowDefinition>
             <!--23--><RowDefinition Height="32"></RowDefinition>
             <!--24--><RowDefinition Height="32"></RowDefinition>
+            <!--25--><RowDefinition Height="32"></RowDefinition>
+            <!--26--><RowDefinition Height="32"></RowDefinition>
+            <!--27--><RowDefinition Height="32"></RowDefinition>
+            <!--28--><RowDefinition Height="32"></RowDefinition>
+            <!--29--><RowDefinition Height="32"></RowDefinition>
+            <!--30--><RowDefinition Height="32"></RowDefinition>
+            <!--31--><RowDefinition Height="32"></RowDefinition>
+            <!--32--><RowDefinition Height="32"></RowDefinition>
+            <!--33--><RowDefinition Height="32"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="210"></ColumnDefinition>
@@ -121,5 +130,36 @@
         <CheckBox Grid.Row="24" Grid.Column="2" IsChecked="{Binding ThirdFamilyMembership, Mode=TwoWay}" ></CheckBox>
         <TextBlock Grid.Row="24" Grid.Column="3" Text="3. oder weiteres Familienmitglied" VerticalAlignment="Center" />
 
+        <TextBlock Grid.Row="25" Grid.Column="0" Text="SEPA-Lastschriftmandat" FontWeight="Bold" Grid.ColumnSpan="4" VerticalAlignment="Center" />
+
+        <TextBlock Grid.Row="26" Grid.ColumnSpan="3" VerticalAlignment="Center" Text="Ich ermächtige den Aikido-Verein Forchheim e.V., Zahlungen von meinem Bankkonto..."/>
+
+        <TextBlock Grid.Row="27" Grid.Column="0" Grid.ColumnSpan="2" Foreground="#888888" VerticalAlignment="Center" Text="Gläubiger-Identifikationsnummer DE55AVF00000169893" />
+        <TextBlock Grid.Row="27" Grid.Column="2" VerticalAlignment="Center" Text="Mandatsreferenz" />
+        <TextBox Grid.Row="27" Grid.Column="3" Text="{Binding Id}"/>
+
+        <TextBlock Grid.Row="28" Grid.Column="3" VerticalAlignment="Center" Text="(wird vom Verein eingetragen)" FontSize="10"/>
+
+        <TextBlock Grid.Row="29" Grid.ColumnSpan="2" VerticalAlignment="Center" Text="Name des Kontoinhabers (in Druckbuchstaben):" />
+        <TextBox Grid.Row="29" Grid.Column="2" Grid.ColumnSpan="2" />
+
+        <TextBlock Grid.Row="30" Text="Kreditinstitut" Foreground="#888888" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="30" Grid.Column="1" IsEnabled="false" />
+        <TextBlock Grid.Row="30" Grid.Column="2" Text="BIC"  Foreground="#888888" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="30" Grid.Column="3" IsEnabled="false" />
+
+        <TextBlock Grid.Row="31" Text="IBAN:" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="31" Grid.Column="1" Grid.ColumnSpan="3" Text="DE" />
+
+        <TextBox x:Name="Mandatsort" IsEnabled="false" Grid.Row="32" Grid.Column="0" />
+        <TextBox x:Name="Mandatsdatum" IsEnabled="true" Grid.Row="32" Grid.Column="1"/>
+        <TextBlock Grid.Row="32" Grid.Column="2" Text="Unterschrift vorhanden:" VerticalAlignment="Center"/>
+        <CheckBox Grid.Row="32" Grid.Column="3"></CheckBox>
+
+        <TextBlock Grid.Row="33" Grid.Column="0"  Foreground="#888888" Text="Ort, Datum:"/>
+        <TextBlock Grid.Row="33" Grid.Column="1" Text="(Mandatsdatum)"/>
+        <TextBlock Grid.Row="33" Grid.Column="3" Grid.ColumnSpan="2" Foreground="#888888" Text="Unterschrift des Kontoinhabers"/>
+
     </Grid>
+    </ScrollViewer>
 </Page>
