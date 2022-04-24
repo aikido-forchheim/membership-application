@@ -4,7 +4,7 @@ namespace MembershipApplication.ViewModels
 {
     public class MainViewModel : ObservableRecipient
     {
-        private bool _isChildApplication;
+        private bool _isChildApplication = true;
         public bool IsChildApplication
         {
             get => _isChildApplication;
@@ -15,11 +15,15 @@ namespace MembershipApplication.ViewModels
             }
         }
 
-        private bool _isAdultApplication = true;
+        private bool _isAdultApplication;
         public bool IsAdultApplication
         {
             get => _isAdultApplication;
-            set => SetProperty(ref _isAdultApplication, value);
+            set
+            {
+                SetProperty(ref _isAdultApplication, value);
+                //IsChildApplication = !value;
+            }
         }
 
         private int _id;
