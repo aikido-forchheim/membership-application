@@ -1,6 +1,7 @@
 using MembershipApplication.Interfaces;
-using MvvmCross.ViewModels;
-public class MainViewModel : MvxViewModel
+using Microsoft.Toolkit.Mvvm.ComponentModel;
+
+public class MainViewModel : ObservableRecipient
 {
     public string Message { get => MessageService.GetMessage(); }
 
