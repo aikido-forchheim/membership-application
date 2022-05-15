@@ -47,6 +47,7 @@
             <!--31--><RowDefinition Height="32"></RowDefinition>
             <!--32--><RowDefinition Height="32"></RowDefinition>
             <!--33--><RowDefinition Height="32"></RowDefinition>
+            <!--34--><RowDefinition Height="32"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="210"></ColumnDefinition>
@@ -175,17 +176,22 @@
 
         <!-- 31: ok -->
         <TextBlock Grid.Row="31" Text="IBAN:" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="31" Grid.Column="1" Grid.ColumnSpan="3" Text="DE" Text="{Binding IBAN, Mode=TwoWay}" />
+        <TextBox Grid.Row="31" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding IBAN, Mode=TwoWay}" />
 
+        <!-- 32: ok -->
         <TextBox x:Name="Mandatsort" IsEnabled="false" Grid.Row="32" Grid.Column="0" />
         <TextBox x:Name="Mandatsdatum" IsEnabled="true" Grid.Row="32" Grid.Column="1" Text="{Binding MandateDate, Mode=TwoWay}" />
         <TextBlock Grid.Row="32" Grid.Column="2" Text="Unterschrift vorhanden:" VerticalAlignment="Center"/>
         <CheckBox Grid.Row="32" Grid.Column="3" IsChecked="{Binding HasSignature, Mode=TwoWay}" ></CheckBox>
 
+        <!-- 33: ok -->
         <TextBlock Grid.Row="33" Grid.Column="0"  Foreground="#888888" Text="Ort, Datum:"/>
         <TextBlock Grid.Row="33" Grid.Column="1" Text="(Mandatsdatum)"/>
         <TextBlock Grid.Row="33" Grid.Column="3" Grid.ColumnSpan="2" Foreground="#888888" Text="Unterschrift des Kontoinhabers"/>
 
+        <!-- 34: ok -->
+        <Button Grid.Row="34" Grid.Column="0" Content="Save" Command="{Binding SaveCommand}" />
+        <TextBox Grid.Row="34" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding SaveText}" />
     </Grid>
     </ScrollViewer>
 </Page>

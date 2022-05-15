@@ -1,4 +1,6 @@
+using System.Threading.Tasks;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Microsoft.Toolkit.Mvvm.Input;
 
 namespace MembershipApplication.ViewModels
 {
@@ -12,7 +14,7 @@ namespace MembershipApplication.ViewModels
             {
                 SetProperty(ref _isChildApplication, value);
                 if (value || IsAdultApplication == IsChildApplication)
-                IsAdultApplication = !value;
+                    IsAdultApplication = !value;
             }
         }
 
@@ -24,7 +26,7 @@ namespace MembershipApplication.ViewModels
             {
                 SetProperty(ref _isAdultApplication, value);
                 if (value || IsAdultApplication == IsChildApplication)
-                IsChildApplication = !value;
+                    IsChildApplication = !value;
             }
         }
 
@@ -127,7 +129,7 @@ namespace MembershipApplication.ViewModels
             {
                 SetProperty(ref _secondFamilyMembership, value);
                 if (value)
-                ThirdFamilyMembership = !value;
+                    ThirdFamilyMembership = !value;
             }
         }
 
@@ -139,7 +141,7 @@ namespace MembershipApplication.ViewModels
             {
                 SetProperty(ref _thirdFamilyMembership, value);
                 if (value)
-                SecondFamilyMembership = !value;
+                    SecondFamilyMembership = !value;
             }
         }
 
@@ -169,6 +171,18 @@ namespace MembershipApplication.ViewModels
         {
             get => _hasSignature;
             set => SetProperty(ref _hasSignature, value);
+        }
+
+        public IAsyncRelayCommand SaveCommand { get; }
+
+        private Task OnSaveCommandAsync(string arg)
+        {
+            return Task.FromResult(string.Empty);
+        }
+
+        public MainViewModel()
+        {
+            SaveCommand = new AsyncRelayCommand<string>(OnSaveCommandAsync);
         }
     }
 }
