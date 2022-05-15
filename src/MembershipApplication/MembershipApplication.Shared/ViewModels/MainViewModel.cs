@@ -235,7 +235,7 @@ namespace MembershipApplication.ViewModels
             if (IsChildApplication)
             {
                 //Mitgliedsnummer	Nachname	Vorname	Geburtsdatum	Alter	BK		Familienmitglied	Faktor	Eintritt	Austritt	Faktor	Mandats- Datum	Mandats- Referenz	Nachname	Vorname	BLZ	Kontonummer	 Einzug 	Für	IBAN	Erstlastschrift  In (€)	Telefon	Email 1                               
-                result = $"{Id}\t{LastNameChild}\t{FirstNameChild}\t{BirthdayChild}\t\t{bk}\t\t{familyMemberCount}\t\t{MandateDate}\t\t{1}\t\t\t{MandateDate}\t{Id}\t{accountLastName}\t{accountFirstName}\t\t\t\t\t{IBAN}\t\t{Phone}\t{Mail}";
+                result = $"{Id}\t{LastNameChild}\t{FirstNameChild}\t{BirthdayChild}\t\t{bk}\t\t{familyMemberCount}\t\t{MandateDate}\t\t{1}\t{MandateDate}\t{Id}\t{accountLastName}\t{accountFirstName}\t\t\t\t\t{IBAN}\t\t{Phone}\t{Mail}";
                 payeeNote = $"Halbjahresbeitrag BK {bk}, {FirstNameChild} {LastNameChild}";
                 if (SecondFamilyMembership)
                 {
@@ -248,7 +248,7 @@ namespace MembershipApplication.ViewModels
             }
             else
             {
-                result = $"{Id}\t{LastName}\t{FirstName}\t{Birthday}\t\t{bk}\t\t{familyMemberCount}\t\t{MandateDate}\t\t{1}\t\t\t{MandateDate}\t{Id}\t{accountLastName}\t{accountFirstName}\t\t\t\t\t{IBAN}\t\t{Phone}\t{Mail}";
+                result = $"{Id}\t{LastName}\t{FirstName}\t{Birthday}\t\t{bk}\t\t{familyMemberCount}\t\t{MandateDate}\t\t{1}\t{MandateDate}\t{Id}\t{accountLastName}\t{accountFirstName}\t\t\t\t\t{IBAN}\t\t{Phone}\t{Mail}";
                 payeeNote = $"Halbjahresbeitrag BK {bk}, {FirstName} {LastName}";
                 if (SecondFamilyMembership)
                 {
