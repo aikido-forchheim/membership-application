@@ -182,9 +182,18 @@ namespace MembershipApplication.ViewModels
             set => SetProperty(ref _saveText, value);
         }
 
+        private string _noteToPayee;
+        public string NoteToPayee
+        {
+            get => _noteToPayee;
+            set => SetProperty(ref _noteToPayee, value);
+        }
+
         private Task OnSaveCommandAsync(string arg)
         {
             string result = string.Empty;
+            string payeeNote = string.Empty;
+
             string bk = "Nulla";
             if (IsBk1Checked)
             {
@@ -227,10 +236,28 @@ namespace MembershipApplication.ViewModels
             {
                 //Mitgliedsnummer	Nachname	Vorname	Geburtsdatum	Alter	BK		Familienmitglied	Faktor	Eintritt	Austritt	Faktor	Mandats- Datum	Mandats- Referenz	Nachname	Vorname	BLZ	Kontonummer	 Einzug 	Für	IBAN	Erstlastschrift  In (€)	Telefon	Email 1                               
                 result = $"{Id}\t{LastNameChild}\t{FirstNameChild}\t{BirthdayChild}\t\t{bk}\t\t{familyMemberCount}\t\t{MandateDate}\t\t{1}\t\t{MandateDate}\t{Id}\t{accountFirstName}\t{accountLastName}\t\t{IBAN}\t\t{Phone}\t{Mail}";
+                payeeNote = $"Halbjahresbeitrag BK{bk}, {FirstNameChild} {LastNameChild}";
+                if (SecondFamilyMembership)
+                {
+                    payeeNote += ", halber Beitrag";
+                }
+                if (ThirdFamilyMembership)
+                {
+                    payeeNote = "KEIN EINZUG DA DRITTES FAMILIENMITGLIED";
+                }
             }
             else
             {
                 result = $"{Id}\t{LastName}\t{FirstName}\t{Birthday}\t\t{bk}\t\t{familyMemberCount}\t\t{MandateDate}\t\t{1}\t\t{MandateDate}\t{Id}\t{accountFirstName}\t{accountLastName}\t\t{IBAN}\t\t{Phone}\t{Mail}";
+                payeeNote = $"Halbjahresbeitrag BK{bk}, {FirstName} {LastName}";
+                if (SecondFamilyMembership)
+                {
+                    payeeNote += ", halber Beitrag";
+                }
+                if (ThirdFamilyMembership)
+                {
+                    payeeNote = "KEIN EINZUG DA DRITTES FAMILIENMITGLIED";
+                }
             }
 
             SaveText = result;

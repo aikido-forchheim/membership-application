@@ -48,6 +48,7 @@
             <!--32--><RowDefinition Height="32"></RowDefinition>
             <!--33--><RowDefinition Height="32"></RowDefinition>
             <!--34--><RowDefinition Height="32"></RowDefinition>
+            <!--35--><RowDefinition Height="32"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="210"></ColumnDefinition>
@@ -191,7 +192,10 @@
 
         <!-- 34: ok -->
         <Button Grid.Row="34" Grid.Column="0" Content="Save" Command="{Binding SaveCommand}" />
-        <TextBox Grid.Row="34" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding SaveText}" />
+        <TextBox Grid.Row="34" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding NoteToPayee}" />
+
+        <!-- 35: ok -->
+        <TextBox Grid.Row="35" Grid.Column="0" Grid.ColumnSpan="4" Text="{Binding SaveText}" />
     </Grid>
     </ScrollViewer>
 </Page>
