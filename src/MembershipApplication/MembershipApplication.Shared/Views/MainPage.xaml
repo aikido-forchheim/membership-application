@@ -163,19 +163,22 @@
         <!-- 28: ok -->
         <TextBlock Grid.Row="28" Grid.Column="3" VerticalAlignment="Center" Text="(wird vom Verein eingetragen)" FontSize="10"/>
 
+        <!-- 29: ok -->
         <TextBlock Grid.Row="29" Grid.ColumnSpan="2" VerticalAlignment="Center" Text="Name des Kontoinhabers (in Druckbuchstaben):" />
         <TextBox Grid.Row="29" Grid.Column="2" Grid.ColumnSpan="2" Text="{Binding AccountOwner, Mode=TwoWay}" />
 
+        <!-- 30: ok -->
         <TextBlock Grid.Row="30" Text="Kreditinstitut" Foreground="#888888" VerticalAlignment="Center"/>
         <TextBox Grid.Row="30" Grid.Column="1" IsEnabled="false" />
         <TextBlock Grid.Row="30" Grid.Column="2" Text="BIC"  Foreground="#888888" VerticalAlignment="Center"/>
         <TextBox Grid.Row="30" Grid.Column="3" IsEnabled="false" />
 
+        <!-- 31: ok -->
         <TextBlock Grid.Row="31" Text="IBAN:" VerticalAlignment="Center"/>
-        <TextBox Grid.Row="31" Grid.Column="1" Grid.ColumnSpan="3" Text="DE" />
+        <TextBox Grid.Row="31" Grid.Column="1" Grid.ColumnSpan="3" Text="DE" Text="{Binding IBAN, Mode=TwoWay}" />
 
         <TextBox x:Name="Mandatsort" IsEnabled="false" Grid.Row="32" Grid.Column="0" />
-        <TextBox x:Name="Mandatsdatum" IsEnabled="true" Grid.Row="32" Grid.Column="1"/>
+        <TextBox x:Name="Mandatsdatum" IsEnabled="true" Grid.Row="32" Grid.Column="1" Text="{Binding MandateDate, Mode=TwoWay}" />
         <TextBlock Grid.Row="32" Grid.Column="2" Text="Unterschrift vorhanden:" VerticalAlignment="Center"/>
         <CheckBox Grid.Row="32" Grid.Column="3"></CheckBox>
 

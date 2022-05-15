@@ -150,5 +150,25 @@ namespace MembershipApplication.ViewModels
             set => SetProperty(ref _accountOwner, value);
         }
 
+        private string _iban;
+        public string IBAN
+        {
+            get => _iban;
+            set => SetProperty(ref _iban, value);
+        }
+
+        private string _mandateDate;
+        public string MandateDate
+        {
+            get => _mandateDate;
+            set => SetProperty(ref _mandateDate, value);
+        }
+
+        private bool _hasSignature;
+        public bool HasSignature
+        {
+            get => _hasSignature;
+            set => SetProperty(ref _hasSignature, value);
+        }
     }
 }
