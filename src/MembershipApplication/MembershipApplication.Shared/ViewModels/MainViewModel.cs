@@ -56,6 +56,20 @@ namespace MembershipApplication.ViewModels
             set => SetProperty(ref _birthday, value);
         }
 
+        private string _phone;
+        public string Phone
+        {
+            get => _phone;
+            set => SetProperty(ref _phone, value);
+        }
+
+        private string _mail;
+        public string Mail
+        {
+            get => _mail;
+            set => SetProperty(ref _mail, value);
+        }
+
         private bool _isBk1Checked;
         public bool IsBk1Checked
         {

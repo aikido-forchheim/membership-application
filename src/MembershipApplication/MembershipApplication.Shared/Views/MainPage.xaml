@@ -79,20 +79,25 @@
         <TextBlock Grid.Row="4" Grid.Column="2" Text="Vorname:" VerticalAlignment="Center" />
         <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding FirstName, Mode=TwoWay}" />
     
+        <!-- 5: ok -->
         <TextBlock Grid.Row="5" Grid.Column="0" Text="Geburtsdatum:" VerticalAlignment="Center" />
         <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Birthday, Mode=TwoWay}" IsEnabled="{Binding IsAdultApplication}" />
         <TextBlock Grid.Row="5" Grid.Column="2" Text="Geburtsort" VerticalAlignment="Center" />
         <TextBox Grid.Row="5" Grid.Column="3" Text="{Binding Birthplace, Mode=TwoWay}" IsEnabled="false" />
 
+        <!-- 6: ok -->
         <TextBlock Grid.Row="6" Grid.Column="0" Text="Beruf:" VerticalAlignment="Center" />
         <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding Profession, Mode=TwoWay}" IsEnabled="false" />
         <TextBlock Grid.Row="6" Grid.Column="2" Text="Wohnadresse:" VerticalAlignment="Center" />
         
+        <!-- 7: ok -->
         <TextBlock Grid.Row="7" Grid.Column="0" Text="Straße:" VerticalAlignment="Center" />
         <TextBox Grid.Row="7" Grid.Column="1" Text="{Binding FullStreet, Mode=TwoWay}" IsEnabled="false" />
         
+        <!-- 8: ok -->
         <TextBlock Grid.Row="8" Grid.Column="0" Text="PLZ, Wohnort:" VerticalAlignment="Center" />
         <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding FullPlace, Mode=TwoWay}" IsEnabled="false" />
+        
         
         <TextBlock Grid.Row="9" Grid.Column="0" Text="Telefon (Festnetz, Mobilnetz):" VerticalAlignment="Center" />
         <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding Phone, Mode=TwoWay}" IsEnabled="true" />
