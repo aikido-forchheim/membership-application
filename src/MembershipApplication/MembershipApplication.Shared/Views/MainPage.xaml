@@ -180,7 +180,7 @@
         <TextBox x:Name="Mandatsort" IsEnabled="false" Grid.Row="32" Grid.Column="0" />
         <TextBox x:Name="Mandatsdatum" IsEnabled="true" Grid.Row="32" Grid.Column="1" Text="{Binding MandateDate, Mode=TwoWay}" />
         <TextBlock Grid.Row="32" Grid.Column="2" Text="Unterschrift vorhanden:" VerticalAlignment="Center"/>
-        <CheckBox Grid.Row="32" Grid.Column="3"></CheckBox>
+        <CheckBox Grid.Row="32" Grid.Column="3" IsChecked="{Binding HasSignature, Mode=TwoWay}" ></CheckBox>
 
         <TextBlock Grid.Row="33" Grid.Column="0"  Foreground="#888888" Text="Ort, Datum:"/>
         <TextBlock Grid.Row="33" Grid.Column="1" Text="(Mandatsdatum)"/>
