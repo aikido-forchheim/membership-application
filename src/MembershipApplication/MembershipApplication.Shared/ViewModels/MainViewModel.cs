@@ -228,15 +228,15 @@ namespace MembershipApplication.ViewModels
             if (AccountOwner.Contains(" "))
             {
                 var splitAccountName = AccountOwner.Split(' ');
-                accountFirstName = splitAccountName[0];
-                accountLastName = splitAccountName[1];
+                accountFirstName = splitAccountName[0].Trim();
+                accountLastName = splitAccountName[1].Trim();
             }
 
             if (IsChildApplication)
             {
                 //Mitgliedsnummer	Nachname	Vorname	Geburtsdatum	Alter	BK		Familienmitglied	Faktor	Eintritt	Austritt	Faktor	Mandats- Datum	Mandats- Referenz	Nachname	Vorname	BLZ	Kontonummer	 Einzug 	Für	IBAN	Erstlastschrift  In (€)	Telefon	Email 1                               
-                result = $"{Id}\t{LastNameChild}\t{FirstNameChild}\t{BirthdayChild}\t\t{bk}\t\t{familyMemberCount}\t\t{MandateDate}\t\t{1}\t\t{MandateDate}\t{Id}\t{accountFirstName}\t{accountLastName}\t\t{IBAN}\t\t{Phone}\t{Mail}";
-                payeeNote = $"Halbjahresbeitrag BK{bk}, {FirstNameChild} {LastNameChild}";
+                result = $"{Id}\t{LastNameChild}\t{FirstNameChild}\t{BirthdayChild}\t\t{bk}\t\t{familyMemberCount}\t\t{MandateDate}\t\t{1}\t\t\t{MandateDate}\t{Id}\t{accountLastName}\t{accountFirstName}\t\t\t\t\t{IBAN}\t\t{Phone}\t{Mail}";
+                payeeNote = $"Halbjahresbeitrag BK {bk}, {FirstNameChild} {LastNameChild}";
                 if (SecondFamilyMembership)
                 {
                     payeeNote += ", halber Beitrag";
@@ -248,8 +248,8 @@ namespace MembershipApplication.ViewModels
             }
             else
             {
-                result = $"{Id}\t{LastName}\t{FirstName}\t{Birthday}\t\t{bk}\t\t{familyMemberCount}\t\t{MandateDate}\t\t{1}\t\t{MandateDate}\t{Id}\t{accountFirstName}\t{accountLastName}\t\t{IBAN}\t\t{Phone}\t{Mail}";
-                payeeNote = $"Halbjahresbeitrag BK{bk}, {FirstName} {LastName}";
+                result = $"{Id}\t{LastName}\t{FirstName}\t{Birthday}\t\t{bk}\t\t{familyMemberCount}\t\t{MandateDate}\t\t{1}\t\t\t{MandateDate}\t{Id}\t{accountLastName}\t{accountFirstName}\t\t\t\t\t{IBAN}\t\t{Phone}\t{Mail}";
+                payeeNote = $"Halbjahresbeitrag BK {bk}, {FirstName} {LastName}";
                 if (SecondFamilyMembership)
                 {
                     payeeNote += ", halber Beitrag";
@@ -261,6 +261,7 @@ namespace MembershipApplication.ViewModels
             }
 
             SaveText = result;
+            NoteToPayee = payeeNote;
 
             return Task.FromResult(result);
         }
