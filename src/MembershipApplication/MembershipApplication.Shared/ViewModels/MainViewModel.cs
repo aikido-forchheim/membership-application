@@ -30,7 +30,7 @@ namespace MembershipApplication.ViewModels
             }
         }
 
-        private int _id;
+        private int _id = 600;
         public int Id
         {
             get => _id;
@@ -175,9 +175,67 @@ namespace MembershipApplication.ViewModels
 
         public IAsyncRelayCommand SaveCommand { get; }
 
+        private string _saveText;
+        public string SaveText
+        {
+            get => _saveText;
+            set => SetProperty(ref _saveText, value);
+        }
+
         private Task OnSaveCommandAsync(string arg)
         {
-            return Task.FromResult(string.Empty);
+            string result = string.Empty;
+            string bk = "Nulla";
+            if (IsBk1Checked)
+            {
+                bk = "I";
+            }
+            if (IsBk2Checked)
+            {
+                bk = "II";
+            }
+            if (IsBk3Checked)
+            {
+                bk = "III";
+            }
+            if (IsBk4Checked)
+            {
+                bk = "IV";
+            }
+
+            int familyMemberCount = 1;
+            if (SecondFamilyMembership)
+            {
+                familyMemberCount = 2;
+            }
+            if (ThirdFamilyMembership)
+            {
+                familyMemberCount = 3;
+            }
+
+            string accountFirstName = string.Empty;
+            string accountLastName = string.Empty;
+
+            if (AccountOwner.Contains(" "))
+            {
+                var splitAccountName = AccountOwner.Split(' ');
+                accountFirstName = splitAccountName[0];
+                accountLastName = splitAccountName[1];
+            }
+
+            if (IsChildApplication)
+            {
+                //Mitgliedsnummer	Nachname	Vorname	Geburtsdatum	Alter	BK		Familienmitglied	Faktor	Eintritt	Austritt	Faktor	Mandats- Datum	Mandats- Referenz	Nachname	Vorname	BLZ	Kontonummer	 Einzug 	Für	IBAN	Erstlastschrift  In (€)	Telefon	Email 1                               
+                result = $"{Id}\t{LastNameChild}\t{FirstNameChild}\t{BirthdayChild}\t\t{bk}\t\t{familyMemberCount}\t\t{MandateDate}\t\t{1}\t\t{MandateDate}\t{Id}\t{accountFirstName}\t{accountLastName}\t\t{IBAN}\t\t{Phone}\t{Mail}";
+            }
+            else
+            {
+                result = $"{Id}\t{LastName}\t{FirstName}\t{Birthday}\t\t{bk}\t\t{familyMemberCount}\t\t{MandateDate}\t\t{1}\t\t{MandateDate}\t{Id}\t{accountFirstName}\t{accountLastName}\t\t{IBAN}\t\t{Phone}\t{Mail}";
+            }
+
+            SaveText = result;
+
+            return Task.FromResult(result);
         }
 
         public MainViewModel()
