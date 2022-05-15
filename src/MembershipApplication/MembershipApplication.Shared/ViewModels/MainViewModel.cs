@@ -70,6 +70,20 @@ namespace MembershipApplication.ViewModels
             set => SetProperty(ref _mail, value);
         }
 
+        private string _firstNameChild;
+        public string FirstNameChild
+        {
+            get => _firstNameChild;
+            set => SetProperty(ref _firstNameChild, value);
+        }
+
+        private string _lastNameChild;
+        public string LastNameChild
+        {
+            get => _lastNameChild;
+            set => SetProperty(ref _lastNameChild, value);
+        }
+
         private bool _isBk1Checked;
         public bool IsBk1Checked
         {

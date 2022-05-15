@@ -98,16 +98,21 @@
         <TextBlock Grid.Row="8" Grid.Column="0" Text="PLZ, Wohnort:" VerticalAlignment="Center" />
         <TextBox Grid.Row="8" Grid.Column="1" Text="{Binding FullPlace, Mode=TwoWay}" IsEnabled="false" />
         
-        
+        <!-- 9: ok -->
         <TextBlock Grid.Row="9" Grid.Column="0" Text="Telefon (Festnetz, Mobilnetz):" VerticalAlignment="Center" />
         <TextBox Grid.Row="9" Grid.Column="1" Text="{Binding Phone, Mode=TwoWay}" IsEnabled="true" />
         
+        <!-- 10: ok -->
         <TextBlock Grid.Row="10" Grid.Column="0" Text="E-Mail-Adresse:" VerticalAlignment="Center" />
         <TextBox Grid.Row="10" Grid.Column="1" Text="{Binding Mail, Mode=TwoWay}" IsEnabled="true" />
         
+        <!-- 11: ok -->
         <TextBlock Grid.Row="11" Grid.Column="0" Text="(Zur Vermeidung von Lesefehlem bitte eine E-Mail an vorstand@aikido-forchheim.de senden!)" Grid.ColumnSpan="4" VerticalAlignment="Center" />
+        
+        <!-- 12: ok -->
         <TextBlock Grid.Row="12" Grid.Column="0" FontWeight="Bold" Text="für meinen minderjährigen Sohn/meine minderjährige Tochter:" Grid.ColumnSpan="4" VerticalAlignment="Center" />
 
+        <!-- 13: ok -->
         <TextBlock Grid.Row="13" Grid.Column="0" Text="Familienname:" VerticalAlignment="Center" />
         <TextBox Grid.Row="13" Grid.Column="1" Text="{Binding LastNameChild, Mode=TwoWay}" IsEnabled="{Binding IsChildApplication}" />
         <TextBlock Grid.Row="13" Grid.Column="2" Text="Vorname:" VerticalAlignment="Center" />
