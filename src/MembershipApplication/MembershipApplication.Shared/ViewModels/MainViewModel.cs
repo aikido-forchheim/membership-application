@@ -84,6 +84,13 @@ namespace MembershipApplication.ViewModels
             set => SetProperty(ref _lastNameChild, value);
         }
 
+        private string _birthdayChild;
+        public string BirthdayChild
+        {
+            get => _birthdayChild;
+            set => SetProperty(ref _birthdayChild, value);
+        }
+
         private bool _isBk1Checked;
         public bool IsBk1Checked
         {

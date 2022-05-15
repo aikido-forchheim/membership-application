@@ -74,10 +74,10 @@
         <TextBlock Grid.Row="3" Grid.Column="3" Text="(Nichtzutreffendes bitte streichen)" FontSize="10" VerticalAlignment="Center" /> 
         
         <!-- 4: ok -->
-        <TextBlock Grid.Row="4" Grid.Column="0" Text="Familienname:" VerticalAlignment="Center" />
-        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding LastName, Mode=TwoWay}" />
-        <TextBlock Grid.Row="4" Grid.Column="2" Text="Vorname:" VerticalAlignment="Center" />
-        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding FirstName, Mode=TwoWay}" />
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Familienname:" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding LastName, Mode=TwoWay}" IsEnabled="{Binding IsAdultApplication}" />
+        <TextBlock Grid.Row="4" Grid.Column="2" Text="Vorname:" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="4" Grid.Column="3" Text="{Binding FirstName, Mode=TwoWay}" IsEnabled="{Binding IsAdultApplication}" />
     
         <!-- 5: ok -->
         <TextBlock Grid.Row="5" Grid.Column="0" Text="Geburtsdatum:" VerticalAlignment="Center" />
@@ -118,35 +118,44 @@
         <TextBlock Grid.Row="13" Grid.Column="2" Text="Vorname:" VerticalAlignment="Center" />
         <TextBox Grid.Row="13" Grid.Column="3" Text="{Binding FirstNameChild, Mode=TwoWay}" IsEnabled="{Binding IsChildApplication}" />
     
+        <!-- 14: ok -->
         <TextBlock Grid.Row="14" Grid.Column="0" Text="Geburtsdatum:" VerticalAlignment="Center" />
         <TextBox Grid.Row="14" Grid.Column="1" Text="{Binding BirthdayChild, Mode=TwoWay}" IsEnabled="{Binding IsChildApplication}" />
         <TextBlock Grid.Row="14" Grid.Column="2" Text="Geburtsort" VerticalAlignment="Center" />
         <TextBox Grid.Row="14" Grid.Column="3" Text="{Binding BirthplaceChild, Mode=TwoWay}" IsEnabled="false" />
 
+        <!-- 15: ok -->
         <TextBlock Grid.Row="15" Grid.Column="0" Text="Beruf:" VerticalAlignment="Center" />
         <TextBox Grid.Row="15" Grid.Column="1" Text="{Binding ProfessionChild, Mode=TwoWay}" IsEnabled="false" />
         <TextBlock Grid.Row="15" Grid.Column="2" Text="Wohnadresse (falls abweichend):" Grid.ColumnSpan="2" VerticalAlignment="Center" />
 
+        <!-- 16: ok -->
         <TextBlock Grid.Row="16" Grid.Column="0" Text="........................." VerticalAlignment="Center" />
 
+        <!-- 17/18/19: ok -->
         <TextBlock Grid.Row="17" Grid.Column="0" Text="die Aufnahme in den Aikido-Verein Forchheim e.V." FontWeight="Bold" Grid.ColumnSpan="4" VerticalAlignment="Center" />
         <TextBlock Grid.Row="18" Grid.Column="0" Text="Hinsichtlich des Mitgliedsbeitrags (Jahresbeitrag) bitte ich um Zuordnung in der nachfolgend" Grid.ColumnSpan="4" VerticalAlignment="Center" />
         <TextBlock Grid.Row="19" Grid.Column="0" Text="angekreuzten Beitragsklasse." Grid.ColumnSpan="4" VerticalAlignment="Center" />
 
+        <!-- 20-23: ok -->
         <RadioButton Grid.Row="20" x:Name="BK1" IsChecked="{Binding IsBk1Checked, Mode=TwoWay}" GroupName="Beitragsklasse" Content="Beitragsklasse I" FontWeight="Bold" />
         <RadioButton Grid.Row="21" x:Name="BK2" IsChecked="{Binding IsBk2Checked, Mode=TwoWay}" GroupName="Beitragsklasse" Content="Beitragsklasse II" FontWeight="Bold" />
         <RadioButton Grid.Row="22" x:Name="BK3" IsChecked="{Binding IsBk3Checked, Mode=TwoWay}" GroupName="Beitragsklasse" Content="Beitragsklasse III" FontWeight="Bold" />
         <RadioButton Grid.Row="23" x:Name="BK4" IsChecked="{Binding IsBk4Checked, Mode=TwoWay}" GroupName="Beitragsklasse" Content="Beitragsklasse IV" FontWeight="Bold" />
         
+        <!-- 24: ok -->
         <CheckBox Grid.Row="24" Grid.Column="0" Grid.ColumnSpan="2" IsChecked="{Binding SecondFamilyMembership, Mode=TwoWay}" Text="2. Familienmitglied" ></CheckBox>
         <TextBlock Grid.Row="24" Grid.Column="1" Text="2. Familienmitglied" VerticalAlignment="Center" />
         <CheckBox Grid.Row="24" Grid.Column="2" IsChecked="{Binding ThirdFamilyMembership, Mode=TwoWay}"  ></CheckBox>
         <TextBlock Grid.Row="24" Grid.Column="3" Text="3. oder weiteres Familienmitglied" VerticalAlignment="Center" />
 
+        <!-- 25: ok -->
         <TextBlock Grid.Row="25" Grid.Column="0" Text="SEPA-Lastschriftmandat" FontWeight="Bold" Grid.ColumnSpan="4" VerticalAlignment="Center" />
 
+        <!-- 26: ok -->
         <TextBlock Grid.Row="26" Grid.ColumnSpan="3" VerticalAlignment="Center" Text="Ich ermächtige den Aikido-Verein Forchheim e.V., Zahlungen von meinem Bankkonto..."/>
 
+        <!-- 27: ok -->
         <TextBlock Grid.Row="27" Grid.Column="0" Grid.ColumnSpan="2" Foreground="#888888" VerticalAlignment="Center" Text="Gläubiger-Identifikationsnummer DE55AVF00000169893" />
         <TextBlock Grid.Row="27" Grid.Column="2" VerticalAlignment="Center" Text="Mandatsreferenz" />
         <TextBox Grid.Row="27" Grid.Column="3" Text="{Binding Id}"/>
