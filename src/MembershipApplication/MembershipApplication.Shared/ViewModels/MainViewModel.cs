@@ -36,7 +36,6 @@ namespace MembershipApplication.ViewModels
         }
 
         private string _birthday;
-
         public string Birthday
         {
             get => _birthday;
@@ -57,15 +56,12 @@ namespace MembershipApplication.ViewModels
             set => SetProperty(ref _isBk2Checked, value);
         }
 
-
         private bool _isBk3Checked;
         public bool IsBk3Checked
         {
             get => _isBk3Checked;
             set => SetProperty(ref _isBk3Checked, value);
         }
-
-
 
         private bool _isBk4Checked;
         public bool IsBk4Checked
