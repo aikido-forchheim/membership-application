@@ -142,5 +142,13 @@ namespace MembershipApplication.ViewModels
                 SecondFamilyMembership = !value;
             }
         }
+
+        private string _accountOwner;
+        public string AccountOwner
+        {
+            get => _accountOwner;
+            set => SetProperty(ref _accountOwner, value);
+        }
+
     }
 }
