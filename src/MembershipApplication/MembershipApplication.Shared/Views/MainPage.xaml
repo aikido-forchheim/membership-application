@@ -55,22 +55,25 @@
             <ColumnDefinition Width="210"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
-        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontWeight="Bold" Text="AIKIDO-VEREIN FORCHHEIM E.V." FontSize="18" VerticalAlignment="Center" />
-        
+        <!-- 0: ok -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontWeight="Bold" Text="AIKIDO-VEREIN FORCHHEIM E.V." FontSize="18" VerticalAlignment="Center" />        
         <TextBlock Grid.Row="0" Grid.Column="2" Text="Mitglieds-Nr.:" VerticalAlignment="Center" />
         <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding Id, Mode=TwoWay}" />
         
+        <!-- 1: ok -->
         <TextBlock Grid.Row="1" Grid.Column="3" Text="(wird vom Verein zugeordnet)" FontSize="10" VerticalAlignment="Center" />
         
+        <!-- 2: ok -->
         <TextBlock Grid.Row="2" Grid.Column="0" Text="Kind" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" />
         <CheckBox Grid.Row="2" Grid.Column="1" IsChecked="{Binding IsChildApplication, Mode=TwoWay}"></CheckBox>
         <TextBlock Grid.Row="2" Grid.Column="2" Text="Erwachsener" FontSize="16" FontWeight="Bold" VerticalAlignment="Center" />
         <CheckBox Grid.Row="2" Grid.Column="3" IsChecked="{Binding IsAdultApplication, Mode=TwoWay}"></CheckBox>
         
+        <!-- 3: ok -->
         <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" FontWeight="Bold" Text="Hiermit beantrage ich (als gesetzlicher Vertreter)," VerticalAlignment="Center" />
-        <TextBlock Grid.Row="3" Grid.Column="3" Text="(Nichtzutreffendes bitte streichen)" FontSize="10" VerticalAlignment="Center" />
- 
+        <TextBlock Grid.Row="3" Grid.Column="3" Text="(Nichtzutreffendes bitte streichen)" FontSize="10" VerticalAlignment="Center" /> 
         
+        <!-- 4: ok -->
         <TextBlock Grid.Row="4" Grid.Column="0" Text="Familienname:" VerticalAlignment="Center" />
         <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding LastName, Mode=TwoWay}" />
         <TextBlock Grid.Row="4" Grid.Column="2" Text="Vorname:" VerticalAlignment="Center" />

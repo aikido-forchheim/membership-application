@@ -35,6 +35,20 @@ namespace MembershipApplication.ViewModels
             set => SetProperty(ref _id, value);
         }
 
+        private string _firstName;
+        public string FirstName
+        {
+            get => _firstName;
+            set => SetProperty(ref _firstName, value);
+        }
+
+        private string _lastName;
+        public string LastName
+        {
+            get => _lastName;
+            set => SetProperty(ref _lastName, value);
+        }
+
         private string _birthday;
         public string Birthday
         {
