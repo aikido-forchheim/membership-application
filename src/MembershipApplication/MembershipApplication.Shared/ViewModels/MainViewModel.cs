@@ -225,7 +225,7 @@ namespace MembershipApplication.ViewModels
             string accountFirstName = string.Empty;
             string accountLastName = string.Empty;
 
-            if (AccountOwner.Contains(" "))
+            if (AccountOwner != null && AccountOwner.Contains(" "))
             {
                 var splitAccountName = AccountOwner.Split(' ');
                 accountFirstName = splitAccountName[0].Trim();
