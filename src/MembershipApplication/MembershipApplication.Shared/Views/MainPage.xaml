@@ -60,7 +60,7 @@
         <!-- 0: ok -->
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontWeight="Bold" Text="AIKIDO-VEREIN FORCHHEIM E.V." FontSize="18" VerticalAlignment="Center" />        
         <TextBlock Grid.Row="0" Grid.Column="2" Text="Mitglieds-Nr.:" VerticalAlignment="Center" />
-        <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding Id, Mode=TwoWay}" />
+        <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding Id, Mode=TwoWay}" Style="{StaticResource CupertinoTextBoxStyle}" />
         
         <!-- 1: ok -->
         <TextBlock Grid.Row="1" Grid.Column="3" Text="(wird vom Verein zugeordnet)" FontSize="10" VerticalAlignment="Center" />
