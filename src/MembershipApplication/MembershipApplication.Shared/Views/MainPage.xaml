@@ -9,46 +9,59 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
 
     >
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="24" />
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="Foreground" Value="#DDDDDD" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="Foreground" Value="#DDDDDD" />
+        </Style>
+    </Page.Resources>
     <ScrollViewer>
-    <Grid Margin="32">
+    <Grid Margin="32" RowSpacing="8" ColumnSpacing="8">
 
         <Grid.RowDefinitions>
-            <!-- 0--><RowDefinition Height="32"></RowDefinition>
-            <!-- 1--><RowDefinition Height="32"></RowDefinition>
-            <!-- 2--><RowDefinition Height="32"></RowDefinition>
-            <!-- 3--><RowDefinition Height="32"></RowDefinition>
-            <!-- 4--><RowDefinition Height="32"></RowDefinition>
-            <!-- 5--><RowDefinition Height="32"></RowDefinition>
-            <!-- 6--><RowDefinition Height="32"></RowDefinition>
-            <!-- 7--><RowDefinition Height="32"></RowDefinition>
-            <!-- 8--><RowDefinition Height="32"></RowDefinition>
-            <!-- 9--><RowDefinition Height="32"></RowDefinition>
-            <!--10--><RowDefinition Height="32"></RowDefinition>
-            <!--11--><RowDefinition Height="32"></RowDefinition>
-            <!--12--><RowDefinition Height="32"></RowDefinition>
-            <!--13--><RowDefinition Height="32"></RowDefinition>
-            <!--14--><RowDefinition Height="32"></RowDefinition>
-            <!--15--><RowDefinition Height="32"></RowDefinition>
-            <!--16--><RowDefinition Height="32"></RowDefinition>
-            <!--17--><RowDefinition Height="32"></RowDefinition>
-            <!--18--><RowDefinition Height="32"></RowDefinition>
-            <!--19--><RowDefinition Height="32"></RowDefinition>
-            <!--20--><RowDefinition Height="32"></RowDefinition>
-            <!--21--><RowDefinition Height="32"></RowDefinition>
-            <!--22--><RowDefinition Height="32"></RowDefinition>
-            <!--23--><RowDefinition Height="32"></RowDefinition>
-            <!--24--><RowDefinition Height="32"></RowDefinition>
-            <!--25--><RowDefinition Height="32"></RowDefinition>
-            <!--26--><RowDefinition Height="32"></RowDefinition>
-            <!--27--><RowDefinition Height="32"></RowDefinition>
-            <!--28--><RowDefinition Height="32"></RowDefinition>
-            <!--29--><RowDefinition Height="32"></RowDefinition>
-            <!--30--><RowDefinition Height="32"></RowDefinition>
-            <!--31--><RowDefinition Height="32"></RowDefinition>
-            <!--32--><RowDefinition Height="32"></RowDefinition>
-            <!--33--><RowDefinition Height="32"></RowDefinition>
-            <!--34--><RowDefinition Height="32"></RowDefinition>
-            <!--35--><RowDefinition Height="32"></RowDefinition>
+            <!-- 0--><RowDefinition Height="48"></RowDefinition>
+            <!-- 1--><RowDefinition Height="48"></RowDefinition>
+            <!-- 2--><RowDefinition Height="48"></RowDefinition>
+            <!-- 3--><RowDefinition Height="48"></RowDefinition>
+            <!-- 4--><RowDefinition Height="48"></RowDefinition>
+            <!-- 5--><RowDefinition Height="48"></RowDefinition>
+            <!-- 6--><RowDefinition Height="48"></RowDefinition>
+            <!-- 7--><RowDefinition Height="48"></RowDefinition>
+            <!-- 8--><RowDefinition Height="48"></RowDefinition>
+            <!-- 9--><RowDefinition Height="48"></RowDefinition>
+            <!--10--><RowDefinition Height="48"></RowDefinition>
+            <!--11--><RowDefinition Height="48"></RowDefinition>
+            <!--12--><RowDefinition Height="48"></RowDefinition>
+            <!--13--><RowDefinition Height="48"></RowDefinition>
+            <!--14--><RowDefinition Height="48"></RowDefinition>
+            <!--15--><RowDefinition Height="48"></RowDefinition>
+            <!--16--><RowDefinition Height="48"></RowDefinition>
+            <!--17--><RowDefinition Height="48"></RowDefinition>
+            <!--18--><RowDefinition Height="48"></RowDefinition>
+            <!--19--><RowDefinition Height="48"></RowDefinition>
+            <!--20--><RowDefinition Height="48"></RowDefinition>
+            <!--21--><RowDefinition Height="48"></RowDefinition>
+            <!--22--><RowDefinition Height="48"></RowDefinition>
+            <!--23--><RowDefinition Height="48"></RowDefinition>
+            <!--24--><RowDefinition Height="48"></RowDefinition>
+            <!--25--><RowDefinition Height="48"></RowDefinition>
+            <!--26--><RowDefinition Height="48"></RowDefinition>
+            <!--27--><RowDefinition Height="48"></RowDefinition>
+            <!--28--><RowDefinition Height="48"></RowDefinition>
+            <!--29--><RowDefinition Height="48"></RowDefinition>
+            <!--30--><RowDefinition Height="48"></RowDefinition>
+            <!--31--><RowDefinition Height="48"></RowDefinition>
+            <!--32--><RowDefinition Height="48"></RowDefinition>
+            <!--33--><RowDefinition Height="48"></RowDefinition>
+            <!--34--><RowDefinition Height="48"></RowDefinition>
+            <!--35--><RowDefinition Height="48"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="210"></ColumnDefinition>
